@@ -1,27 +1,52 @@
 <html>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
-  <script>
-    window.next = () => {
-      const nextURL = `https://www.hajosteszt.hu/kerdessor/GyakorloKerdes?kerdes=${Math.round(
-        Math.random() * (859 - 1) + 1
-      )}`;
-      const $iframe = document.getElementById("iframe");
-      $iframe.src = nextURL;
-    };
-  </script>
-  <body>
-    <div class="flex flex-col min-h-screen">
-      <iframe
-        id="iframe"
-        class="flex-1"
-        src="https://www.hajosteszt.hu/kerdessor/GyakorloKerdes?kerdes=522"
-      ></iframe>
-      <button class="p-4 bg-blue-300" onclick="javascript:window.next()">
-        Next
-      </button>
-    </div>
-  </body>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+      <link
+        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet"
+      />
+      <script>
+        window.next = () => {
+          const nextURL = `https://www.hajosteszt.hu/kerdessor/GyakorloKerdes?kerdes=${Math.round(
+            Math.random() * (859 - 1) + 1
+          )}`;
+          const $iframe = document.getElementById("iframe");
+          $iframe.src = nextURL;
+        };
+      </script>
+    </head>
+
+    <body>
+      <div class="flex flex-col min-h-screen">
+        <button
+          class="
+            p-3
+            bg-gradient-to-r
+            from-purple-400
+            via-pink-500
+            to-red-500
+            text-white
+            font-black
+            fixed
+            w-full
+            inset-x-0
+          "
+          onclick="javascript:window.next()"
+        >
+          Next
+        </button>
+        <iframe
+          id="iframe"
+          style="height: 200vh"
+          src="https://www.hajosteszt.hu/kerdessor/GyakorloKerdes?kerdes=522"
+        ></iframe>
+      </div>
+    </body>
+  </html>
 </html>
